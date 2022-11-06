@@ -13,6 +13,7 @@ class XIBTableTableViewCell: UITableViewCell {
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var bottomLabel: UILabel!
     
+    @IBOutlet weak var slideBar: UISlider!
     func configure(imageName: String, dogName: String?) {
         self.demoImageView.image = UIImage(named: dogName ?? "JINX")
         self.bottomLabel.text = dogName
@@ -25,7 +26,12 @@ class XIBTableTableViewCell: UITableViewCell {
     }
     
 //    override func awakeFromNib() {
-//        super.awakeFromNib()
+    @IBAction func addSlide(_ sender: UIButton) {
+        self.slideBar.value = 0.5
+        self.topLabel.text = "50"
+        self.topLabel.textColor = UIColor(red: 100, green: 5, blue: 5, alpha: 100)
+    }
+    //        super.awakeFromNib()
 //        // Initialization code
 //    }
 //

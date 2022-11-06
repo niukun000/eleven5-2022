@@ -18,7 +18,7 @@ class DemoTableViewController: UIViewController {
     var index : Int?
 //    override var description: String = ["s"]
     // true -> XIB, false -> Storyboard
-    var cellAppearanceState: Bool = false
+    var cellAppearanceState: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class DemoTableViewController: UIViewController {
     }
     
     func setupUI() {
-        self.swapButton.setTitle("Swap to XIB", for: .normal)
+        self.swapButton.setTitle("Swap to Storyboard", for: .normal)
         self.demoTableView.dataSource = self
         self.demoTableView.delegate = self
         self.demoTableView.register(UINib(nibName: "XIBTableTableViewCell", bundle: nil)

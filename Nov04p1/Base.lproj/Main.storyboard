@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fed-qT-bbB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i7P-Ue-Kc7">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -24,6 +24,22 @@
             </objects>
             <point key="canvasLocation" x="-408" y="56"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rll-TJ-Ibf">
+            <objects>
+                <navigationController id="i7P-Ue-Kc7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zLg-sR-pRc">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="a0h-t4-Ouf" kind="relationship" relationship="rootViewController" id="1li-cB-enK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O4p-ua-onV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1179" y="-924"/>
+        </scene>
         <!--Table View-->
         <scene sceneID="82B-od-YG5">
             <objects>
@@ -33,18 +49,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXg-CT-6rw">
-                                <rect key="frame" x="8" y="67" width="377" height="35"/>
+                                <rect key="frame" x="8" y="111" width="377" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="LCH-g3-U90"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="TableView"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Swap to StoryBoard"/>
                                 <connections>
                                     <action selector="swapButtonPressed:" destination="a0h-t4-Ouf" eventType="touchUpInside" id="pHd-s7-FBI"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xiR-QZ-Qz2">
-                                <rect key="frame" x="8" y="102" width="377" height="659"/>
+                                <rect key="frame" x="8" y="146" width="377" height="664"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DemoTableCell" id="FOZ-iI-8mt" customClass="DemoStoryBoardTableViewCell" customModule="Nov04p1" customModuleProvider="target">
@@ -109,7 +125,7 @@
                                             <outlet property="bottomLabel" destination="NtD-ig-jwB" id="b3j-Qz-ZNC"/>
                                             <outlet property="demoImageView" destination="MEG-HB-eih" id="Q1B-9n-ye9"/>
                                             <outlet property="topLabel" destination="ARG-s0-4nZ" id="uVm-hm-h7Z"/>
-                                            <segue destination="zTL-wX-gr6" kind="show" identifier="detailPage" id="E0f-ws-QVx"/>
+                                            <segue destination="zTL-wX-gr6" kind="presentation" identifier="detailPage" modalPresentationStyle="fullScreen" id="E0f-ws-QVx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -129,6 +145,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Table View" id="gjb-h1-EGM"/>
+                    <navigationItem key="navigationItem" id="8Fg-5j-P9I"/>
                     <connections>
                         <outlet property="demoTableView" destination="xiR-QZ-Qz2" id="j1e-vo-c4s"/>
                         <outlet property="swapButton" destination="zXg-CT-6rw" id="CYh-iI-3uQ"/>
@@ -143,7 +160,7 @@
             <objects>
                 <viewController storyboardIdentifier="TableNavigationDetailViewController" id="zTL-wX-gr6" customClass="TableNavigationDetailViewController" customModule="Nov04p1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bME-aG-6N8">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J37-7w-SMu">
@@ -157,7 +174,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFH-tT-7jp">
-                                <rect key="frame" x="9" y="748" width="375" height="35"/>
+                                <rect key="frame" x="9" y="783" width="375" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="zcg-hP-JZM"/>
                                 </constraints>
@@ -237,6 +254,9 @@
             <point key="canvasLocation" x="-1316" y="-247"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1li-cB-enK"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
