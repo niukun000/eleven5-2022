@@ -24,12 +24,14 @@ class TableNavigationDetailViewController: UIViewController {
     var typeString : String?
     var detailString : String?
     @IBOutlet weak var detail: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.picture.image = UIImage(named: nameString ?? "BlueEyes")
         print(self.nameString ?? "None")
         self.name.text = self.nameString
-        self.type.text = self.nameString
+//        self.type.text = self.nameString
+        self.type.text = self.detailString
         // Do any additional setup after loading the view.
         
     }

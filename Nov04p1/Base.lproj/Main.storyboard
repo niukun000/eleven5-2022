@@ -125,7 +125,7 @@
                                             <outlet property="bottomLabel" destination="NtD-ig-jwB" id="b3j-Qz-ZNC"/>
                                             <outlet property="demoImageView" destination="MEG-HB-eih" id="Q1B-9n-ye9"/>
                                             <outlet property="topLabel" destination="ARG-s0-4nZ" id="uVm-hm-h7Z"/>
-                                            <segue destination="zTL-wX-gr6" kind="presentation" identifier="detailPage" modalPresentationStyle="fullScreen" id="E0f-ws-QVx"/>
+                                            <segue destination="zTL-wX-gr6" kind="show" identifier="detailPage" id="E0f-ws-QVx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -164,7 +164,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J37-7w-SMu">
-                                <rect key="frame" x="8" y="118" width="377" height="50"/>
+                                <rect key="frame" x="8" y="162" width="377" height="50"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="2A3-qP-4fm"/>
@@ -185,13 +185,13 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ch3-JC-prH">
-                                <rect key="frame" x="22" y="195" width="349" height="349"/>
+                                <rect key="frame" x="22" y="239" width="349" height="349"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ch3-JC-prH" secondAttribute="height" multiplier="1:1" id="gk1-e7-YHq"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZX-Pc-Qnl">
-                                <rect key="frame" x="26" y="554" width="341" height="30"/>
+                                <rect key="frame" x="26" y="598" width="341" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ro6-VY-zsX"/>
                                 </constraints>
@@ -199,9 +199,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1cY-NY-BN8">
-                                <rect key="frame" x="103" y="625" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="type detailed information" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1cY-NY-BN8">
+                                <rect key="frame" x="8" y="628" width="377" height="147"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -217,7 +216,11 @@
                             <constraint firstItem="J37-7w-SMu" firstAttribute="leading" secondItem="VnN-VL-gKg" secondAttribute="leading" constant="8" id="Jb5-hl-bVO"/>
                             <constraint firstItem="VnN-VL-gKg" firstAttribute="bottom" secondItem="zFH-tT-7jp" secondAttribute="bottom" id="One-dx-m9h"/>
                             <constraint firstItem="ch3-JC-prH" firstAttribute="leading" secondItem="VnN-VL-gKg" secondAttribute="leading" constant="22" id="QIi-wP-c2V"/>
+                            <constraint firstItem="VnN-VL-gKg" firstAttribute="trailing" secondItem="1cY-NY-BN8" secondAttribute="trailing" constant="8" id="U4x-XL-2kW"/>
+                            <constraint firstItem="zFH-tT-7jp" firstAttribute="top" secondItem="1cY-NY-BN8" secondAttribute="bottom" constant="8" id="anG-sL-Nc6"/>
                             <constraint firstItem="pZX-Pc-Qnl" firstAttribute="top" secondItem="ch3-JC-prH" secondAttribute="bottom" constant="10" id="bcP-lf-u1Q"/>
+                            <constraint firstItem="1cY-NY-BN8" firstAttribute="top" secondItem="pZX-Pc-Qnl" secondAttribute="bottom" id="bz7-oI-rgZ"/>
+                            <constraint firstItem="1cY-NY-BN8" firstAttribute="leading" secondItem="VnN-VL-gKg" secondAttribute="leading" constant="8" id="lPJ-tP-jOT"/>
                             <constraint firstAttribute="trailing" secondItem="zFH-tT-7jp" secondAttribute="trailing" constant="9" id="qdd-Qe-1Ra"/>
                             <constraint firstItem="J37-7w-SMu" firstAttribute="top" secondItem="VnN-VL-gKg" secondAttribute="top" constant="59" id="rau-Tt-OYR"/>
                             <constraint firstItem="VnN-VL-gKg" firstAttribute="trailing" secondItem="J37-7w-SMu" secondAttribute="trailing" constant="8" id="v1K-xl-PDl"/>

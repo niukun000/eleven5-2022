@@ -31,14 +31,6 @@ class XIBTableTableViewCell: UITableViewCell {
         self.topLabel.text = "50"
         self.topLabel.textColor = UIColor(red: 100, green: 5, blue: 5, alpha: 100)
     }
-    //        super.awakeFromNib()
-//        // Initialization code
-//    }
-//
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
+
     
 }

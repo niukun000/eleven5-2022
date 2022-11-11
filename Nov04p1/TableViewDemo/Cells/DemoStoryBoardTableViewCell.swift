@@ -22,6 +22,7 @@ class DemoStoryBoardTableViewCell: UITableViewCell {
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         self.topLabel.text = "\(Int(sender.value * 100))"
     }
+
     
 
 }
